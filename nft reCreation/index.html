@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>NFTMAK-NFT Marketplace </title>
+
+</head>
+<body>
+<script>
+function logout() {
+    sessionStorage.removeItem('isAuthenticated');
+    localStorage.removeItem('userEmail');
+    localStorage.removeItem('userPassword');
+    window.location.href = './JS APP/Login.html';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+    if(sessionStorage.getItem('isAuthenticated')) {
+        document.getElementById('loginLink').style.display = 'none';
+        document.getElementById('signupLink').style.display = 'none';
+        document.querySelector('.logoutBtn').style.display = 'inline-block';
+    }
+           
+            if (!sessionStorage.getItem('isAuthenticated')) {
+                window.location.href = './JS APP/Login.html';
+            }
+        });
+    
+
+    function logout() {
+        sessionStorage.removeItem('isAuthenticated');
+        window.location.href = './JS APP/Login.html';
+    }
+    </script>
+
+    <header>
+        <nav>
+        <div class="logo">
+<a href="index.html" class="brandLogo">NFT</a>
+<a href="index.html" class="brandLogo">MAK</a>
+        </div>
+
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <div class="menu">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="explore.html">Explore</a></li>
+<li><a href="pages.html">Pages</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="search-container">
+<input class="searchbar" type="search" placeholder="Search NFT">
+</div>
+<div class="login">
+    <a href="./JS APP/Login.html" class="loginBtn">Login</a>
+    <a href="./JS APP/registration.html" class="loginBtn">Sign Up</a>
+</div>
+</nav>
+
+    
+
+
+
+
+<div class="promotxt">
+<p>
+BUY AND SELL
+</p>
+
+<p>
+    DIGITAL ART
+</p>
+
+
+<p>
+    NFT COLLECTION 
+    
+</p>
+
+
+</div>
+
+
+
+<div class="btn">
+    <a href="btn" class="btn">LETS GET STARTED</a>
+</div>
+
+
+
+<div class="grid-box">
+<div class="grid1">
+    <img src="./grid1-top.png" alt="">
+</div>
+</header>
+
+<div class="grid1">
+    <img src="./grid1-top.png" alt="">
+</div>
+</div>
+
+<div class="text2">
+<h2>What we actually do?</h2>
+<p>NFTs ate transformng the way commerce is transacted,contracts are enforced,investments are held,and value is transfered.Every tree in the forest kmows about creating value and value os transferred every tout reciprocity ,</p>
+
+
+</div>
+
+
+
+<div class="cardcontainer">
+
+<div class="card">
+    <img src="wallet.png" alt="wallet">
+<h3>Set up your wallet</h3>
+<p>
+    NFTs ate transforming the way commerce is transacted
+</p>
+</div>
+
+
+<div class="card">
+    <img src="camera.png" alt="wallet">
+<h3>Create your collection</h3>
+<p>
+    NFTs ate transforming the way commerce is transacted
+</p>
+</div>
+
+
+<div class="card">
+    <img src="gift.png" alt="wallet">
+    <h3>Add your NFTS</h3>
+    <p>
+        NFTs ate transforming the way commerce is transacted
+    </p>
+</div>
+
+
+</div>
+
+<div class="text3">
+    <h1>FEATURED ARTWORKS</h1>
+
+</div>
+
+<div class="main">
+    <div class="crds">
+        <div class="imge"> <img src="./walking girl.gif">
+    </div>
+        <div class="ttle"><h3>Walking Girl</h3>
+        </div>
+        <div class="bd">
+    
+            3.68 ETH
+            </div>
+        <div class="des"><p>NFTs arSSe transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+    </div>
+    
+    
+    <div class="crds">
+        <div class="imge"> <img src="./baloon maker.gif"></div>
+        <div class="ttle"><h3>Baloon Maker</h3></div>
+        <div class="bd">
+    
+            2.65 ETH
+            </div>
+        <div class="des"><p>NFTs ate transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+    </div>
+    
+    
+    
+    <div class="crds">
+        <div class="imge"> <img src="./dancing-burgwe.gif"></div>
+        <div class="ttle"><h3>Dancing Bread</h3></div>
+        <div class="bd">
+    
+            1.35 ETH
+            
+            
+            </div>
+        <div class="des"><p>NFTs ate transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+    </div>
+    
+    
+    </div>
+
+
+    <div class="text4">
+        <h1>FEATURES OF THE WEEK</h1>
+    
+    </div>
+
+    <div class="main">
+    <div class="crds">
+        <div class="imge"> <img src="./crystal1.jpg"></div>
+        <div class="ttle"><h3>BLUE CRYSTAL</h3></div>
+        <div class="bd">
+    
+            5.65 ETH
+            </div>
+        <div class="des"><p>NFTs arSSe transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+    </div>
+    
+    
+    <div class="crds">
+        <div class="imge"> <img src="./crystal2.jpg"></div>
+        <div class="ttle"><h3>ORANGE CRYSTAL</h3></div>
+        <div class="bd">
+    
+            1.65 ETH
+            </div>
+        <div class="des"><p>NFTs ate transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+    </div>
+    
+    
+    <div class="crds">
+        <div class="imge"> <img src="./crystal3.jpg"></div>
+        <div class="ttle"><h3>GREEN CRYSTAL</h3></div>
+        <div class="bd">
+    
+            7.65 ETH
+            
+            
+            </div>
+        <div class="des"><p>NFTs ate transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+    </div>
+    
+    
+    </div>
+
+
+    <div class="text5">
+        <h1>TOP COLLECTIONS</h1>
+    </div>
+
+
+
+    <div class="main">
+        <div class="crds">
+            <div class="imge"> <img src="./thumb 1.png"></div>
+            <div class="ttle"><h3>BLUE CRYSTAL</h3></div>
+            <div class="bd">
+        
+                5.65 ETH
+                </div>
+            <div class="des"><p>NFTs arSSe transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+        </div>
+        
+        
+        <div class="crds">
+            <div class="imge"> <img src="./thumb2.png"></div>
+            <div class="ttle"><h3>ORANGE CRYSTAL</h3></div>
+            <div class="bd">
+        
+                1.65 ETH
+                </div>
+            <div class="des"><p>NFTs ate transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+        </div>
+        
+        
+        <div class="crds">
+            <div class="imge"> <img src="./thumb 3.png"></div>
+            <div class="ttle"><h3>GREEN CRYSTAL</h3></div>
+            <div class="bd">
+        
+                7.65 ETH
+                
+                
+                </div>
+            <div class="des"><p>NFTs ate transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+        </div>
+        
+        
+        </div>
+    
+
+
+
+
+    <div class="text6">
+        <h1>EXPLORE PRODUCTS</h1>
+    </div>
+    
+
+
+
+    <div class="main1">
+        <div class="crds1">
+            <div class="imge"> <img src="./gif1x.gif"></div>
+            <div class="ttle"><h3>BLUE CRYSTAL</h3></div>
+            <div class="bd">
+        
+                5.65 ETH
+                </div>
+            <div class="des"><p>NFTs arSSe transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+        </div>
+        
+        
+        <div class="crds1">
+            <div class="imge"> <img src="./gif2x-ezgif.com-resize (1).gif"></div>
+            <div class="ttle"><h3>ORANGE CRYSTAL</h3></div>
+            <div class="bd">
+        
+                1.65 ETH
+                </div>
+            <div class="des"><p>NFTs ate transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+        </div>
+        
+        
+        <div class="crds1">
+            <div class="imge"> <img src="./gif3xx-ezgif.com-resize (1).gif"></div>
+            <div class="ttle"><h3>GREEN CRYSTAL</h3></div>
+            <div class="bd">
+        
+                7.65 ETH
+                
+                
+                </div>
+            <div class="des"><p>NFTs ate transforming the way commerce is transacted</p><button class="button" >PLACE A BID</button></div>
+        </div>
+        
+        
+        </div>
+
+        
+
+
+    
+
+
+
+    
+
+
+        <section class="explore">
+            <div class="grid">
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+
+
+
+
+
+</div>
+<div class="explore-text">
+<h2>Explore Our Top Art Works </h2>
+<p>
+NFTs ate transformng the way commerce is transacted,contracts are enforced,investments are held,and value is transfered.Every tree in the forest kmows about creating value and value os transferred every tout reciprocity ,
+</p>
+<div class="stats">
+<div> <small>ArtWorks</small>
+<h3>1305k
+</h3>
+<p>Nfts are transforming the way comerce</p>
+</div>
+<div>
+<small>
+Users
+</small>
+<h3>505K</h3>
+<p>
+NFTS transforming the way commerce
+</p>
+</div>
+</div>
+</div>
+            </section>
+
+
+
+
+            <div class="text7">
+                <h1>Our top artists</h1>
+                <p>
+                    NFTs ate transformng the way commerce is transacted,contracts are enforced,investments are held,and value is transfered.Every tree in the forest kmows about creating value and value os transferred every tout reciprocity ,
+                </p>
+            </div>
+        
+
+
+            <div class="artistss">
+            <section class="artists">
+            <div class="cards">
+                <div class="card">
+                    <img src="smoke1.jpg" class="bg-img">
+                    <img src="user1.jpg" class="profile-img">
+                
+                <h3>
+             Esther Howard</h3> 
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+            <span>
+                5.0
+            </span>
+                </div>
+            <p>
+                NFTs transforming the way commerce
+            </p>
+            <button class="card-btn">
+                Follow
+            </button>
+            </div>
+                <div class="card">
+                    <img src="smoke2.jpg" class="bg-img">
+                    <img src="user2.jpg"class="profile-img">
+                
+                <h3>
+                    Jane Cooper
+                </h3> 
+                <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>
+                5.0
+            </span>
+                </div>
+            <p>
+                NFTs transforming the way commerce
+            </p>
+            <button class="card-btn">
+                Follow
+            </button>
+            </div>
+                <div class="card">
+                    <img src="smoke3.jpg" class="bg-img">
+                    <img src="user3.jpg" class="profile-img">
+                
+                <h3>
+                    Wade Warren
+                </h3> 
+                <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>
+                5.0
+            </span>
+                </div>
+            <p>
+                NFTs transforming the way commerce
+            </p>
+            <button class="card-btn">
+                Follow
+            </button>
+            </div>
+            
+                <div class="card">
+                    <img src="smoke4.jpg" class="bg-img">
+                    <img src="user4.jpg" class="profile-img">
+                
+                <h3>
+                    Jenny Wilson
+                </h3> 
+                <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <span>
+                5.0
+            </span>
+                </div>
+            <p>
+                NFTs transforming the way commerce
+            </p>
+            <button class="card-btn">
+                Follow
+            </button>
+            </div>
+            
+            </div>
+            </section>
+            </div>
+            
+          
+
+        </div>
+
+
+        <section class="trial">
+            <h2>GET A FREE TRIAL</h2>
+            <p>
+                NFTS ate transformng the way commerce is transacted,contracts are enforced,investments are held,and value is transfered.Every tree in the forest kmows about creating value and value os transferred every tout reciprocity ,
+            </p>
+            <a href="#" class="btn btn-primary">Join us now</a>
+        
+        </section>
+        <div class="container">
+        
+           
+            <footer>
+                <div class="footer-left">
+                  <h2>NFTMAK Community</h2>
+                  <p>Connect with fellow collectors and creators</p>
+                  <hr />
+                  <h3>Get exclusive drops</h3>
+                  <form>
+                    <div class="input-wrap">
+                      <input type="email" placeholder="Enter Your Email" />
+                      <button type="submit" class="send-btn">SEND</button>
+                    </div>
+                  </form>
+                  <div class="social-icons">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                  </div>
+                </div>
+              
+                <div class="footer-right">
+                  <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ol>
+                      <li><a href="#">Protocol Explore</a></li>
+                      <li><a href="#">System Token</a></li>
+                      <li><a href="#">Optimize Time</a></li>
+                      <li><a href="#">Visual Checking</a></li>
+                    </ol>
+                  </div>
+                  <div class="footer-col">
+                    <h3>Information</h3>
+                    <ol>
+                      <li><a href="#">Market Explore</a></li>
+                      <li><a href="#">Ready Token</a></li>
+                      <li><a href="#">Main Option</a></li>
+                      <li><a href="#">File Checking</a></li>
+                    </ol>
+                  </div>
+                  <div class="footer-col">
+                    <h3>Company</h3>
+                    <ol>
+                      <li><a href="#">Upload Files</a></li>
+                      <li><a href="#">Market Place</a></li>
+                      <li><a href="#">Item Details</a></li>
+                      <li><a href="#">Recent Activity</a></li>
+                    </ol>
+                  </div>
+                  <div class="footer-col">
+                    <h3>Social Media</h3>
+                    <ol>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Instagram</a></li>
+                      <li><a href="#">LinkedIn</a></li>
+                      <li><a href="#">WhatsApp</a></li>
+                    </ol>
+                  </div>
+                </div>
+              </footer>
+              
+
+
+        
+
+
+
+    </div>
+              
+
+
+        
+
+
+
+    </body>
+<script>
+  
+    document.addEventListener('DOMContentLoaded', function() {
+        if (!sessionStorage.getItem('isAuthenticated')) {
+            window.location.href = './JS APP/Login.html';
+        }
+
+      
+        if(sessionStorage.getItem('isAuthenticated')) {
+            document.getElementById('loginLink').style.display = 'none';
+            document.getElementById('signupLink').style.display = 'none';
+            document.querySelector('.logoutBtn').style.display = 'inline-block';
+        }
+    });
+
+    function logout() {
+        sessionStorage.removeItem('isAuthenticated');
+        localStorage.removeItem('userEmail');
+        localStorage.removeItem('userPassword');
+        window.location.href = './JS APP/Login.html';
+    }
+           
+            let currentNFT = null;
+            const modal = document.getElementById('purchaseModal');
+            const closeModal = document.querySelector('.close-modal');
+            
+           
+            closeModal.onclick = () => modal.style.display = 'none';
+            window.onclick = (e) => e.target == modal && (modal.style.display = 'none');
+
+            document.querySelectorAll('.button').forEach(button => {
+                button.addEventListener('click', function() {
+                    const nftCard = this.closest('.crds');
+                    currentNFT = {
+                        element: this,
+                        title: nftCard.querySelector('.ttle h3').textContent,
+                        price: parseFloat(nftCard.querySelector('.bd').textContent),
+                        image: nftCard.querySelector('img').src
+                    };
+                    
+                    
+                    document.getElementById('nftTitle').textContent = currentNFT.title;
+                    document.getElementById('nftPrice').textContent = currentNFT.price;
+                    document.getElementById('purchaseImage').src = currentNFT.image;
+                    document.getElementById('bidAmount').value = currentNFT.price;
+                    modal.style.display = 'block';
+                });
+            });
+
+            document.getElementById('confirmPurchase').addEventListener('click', function() {
+                const bidAmount = parseFloat(document.getElementById('bidAmount').value);
+                const errorElement = document.getElementById('purchaseError');
+                
+                if (!bidAmount || isNaN(bidAmount)) {
+                    errorElement.textContent = 'Please enter a valid bid amount';
+                    return;
+                }
+
+                if (bidAmount < currentNFT.price) {
+                    errorElement.textContent = `Bid must be at least ${currentNFT.price} ETH`;
+                    return;
+                }
+
+               
+                errorElement.textContent = '';
+                currentNFT.element.textContent = 'PURCHASED';
+                currentNFT.element.disabled = true;
+                currentNFT.element.style.backgroundColor = '#4CAF50';
+                modal.style.display = 'none';
+                alert(`Successfully purchased ${currentNFT.title} for ${bidAmount} ETH!`);
+            });
+            bidButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const currentPrice = parseFloat(this.closest('.crds').querySelector('.bd').textContent);
+                    const bidAmount = prompt(`Enter your bid (minimum ${currentPrice} ETH):`);
+                    
+                    if (bidAmount && !isNaN(bidAmount)) {
+                        if (parseFloat(bidAmount) >= currentPrice) {
+                            const confirmBuy = confirm(`Bid ${bidAmount} ETH accepted! Proceed to purchase?`);
+                            if (confirmBuy) {
+                                this.textContent = "PURCHASED";
+                                this.disabled = true;
+                                this.style.backgroundColor = "#4CAF50";
+                                alert('Purchase successful! Thank you!');
+                            }
+                        } else {
+                            alert('Bid must be higher than current price');
+                        }
+                    }
+                });
+            });
+
+           
+            const modal = document.getElementById('bidModal');
+            const confirmModal = document.getElementById('confirmModal');
+            const span = document.querySelector('.close');
+            let currentNFT = null;
+
+            
+            span.onclick = () => modal.style.display = 'none';
+            window.onclick = (event) => {
+                if (event.target == modal) modal.style.display = 'none';
+                if (event.target == confirmModal) confirmModal.style.display = 'none';
+            }
+
+            document.querySelectorAll('.button').forEach(button => {
+                button.addEventListener('click', function() {
+                    currentNFT = {
+                        element: this,
+                        title: this.closest('.crds').querySelector('.ttle h3').textContent,
+                        price: parseFloat(this.closest('.crds').querySelector('.bd').textContent)
+                    };
+                    document.getElementById('currentPrice').textContent = currentNFT.price;
+                    modal.style.display = 'block';
+                });
+            });
+
+            document.getElementById('submitBid').addEventListener('click', function() {
+                const bidInput = document.getElementById('bidAmount');
+                const errorElement = document.getElementById('bidError');
+                const bidValue = parseFloat(bidInput.value);
+
+                errorElement.textContent = '';
+                
+                if (!bidValue || isNaN(bidValue)) {
+                    errorElement.textContent = 'Please enter a valid number';
+                    return;
+                }
+
+                if (bidValue < currentNFT.price) {
+                    errorElement.textContent = `Bid must be at least ${currentNFT.price} ETH`;
+                    return;
+                }
+
+                if (bidValue > currentNFT.price * 2) {
+                    errorElement.textContent = 'Bid cannot exceed 2x current price';
+                    return;
+                }
+
+                modal.style.display = 'none';
+                confirmModal.style.display = 'block';
+                document.getElementById('nftTitle').textContent = currentNFT.title;
+                document.getElementById('purchasePrice').textContent = bidValue;
+            });
+
+            document.getElementById('confirmPurchase').addEventListener('click', async function() {
+                if (!currentWallet) {
+                    alert('Please connect your wallet first!');
+                    confirmModal.style.display = 'none';
+                    return;
+                }
+
+                try {
+                    
+                    const transaction = {
+                        from: currentWallet,
+                        to: '0xNFTContractAddress',
+                        value: web3.utils.toWei(document.getElementById('purchasePrice').textContent, 'ether'),
+                       
+                    };
+
+                   
+                    const txHash = await ethereum.request({
+                        method: 'eth_sendTransaction',
+                        params: [transaction]
+                    });
+
+                    currentNFT.element.textContent = "PURCHASED";
+                    currentNFT.element.disabled = true;
+                    currentNFT.element.style.backgroundColor = "#4CAF50";
+                    confirmModal.style.display = 'none';
+                    alert(`Transaction successful! TX Hash: ${txHash}`);
+                } catch (error) {
+                    alert(`Transaction failed: ${error.message}`);
+                }
+            });
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+            
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                
+                
+                const icon = menuToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+           
+            document.addEventListener('click', function(event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target) && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap';
+            document.head.appendChild(link);
+            
+           
+            const touchableElements = document.querySelectorAll('.card, .crds, .crds1, .btn, .button, .card-btn, li, a');
+            touchableElements.forEach(el => {
+                el.addEventListener('touchstart', function() {}, {passive: true});
+                el.addEventListener('touchmove', function(e) {
+                    
+                    if (this.classList.contains('card') || this.classList.contains('crds') || this.classList.contains('crds1')) {
+                        const touchDelta = Math.abs(e.touches[0].clientY - e.touches[0].initialClientY);
+                        if (touchDelta < 10) {
+                            e.preventDefault();
+                        }
+                    }
+                }, {passive: false});
+            });
+            
+           
+            let currentWallet = null;
+            const connectButton = document.getElementById('connectWallet');
+            const walletAddress = document.getElementById('walletAddress');
+
+            async function connectWallet() {
+                if (typeof ethereum !== 'undefined') {
+                    try {
+                        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                        currentWallet = accounts[0];
+                        connectButton.style.display = 'none';
+                        walletAddress.textContent = `${currentWallet.slice(0,6)}...${currentWallet.slice(-4)}`;
+                        walletAddress.style.display = 'block';
+                    } catch (error) {
+                        alert('Error connecting wallet: ' + error.message);
+                    }
+                } else {
+                    alert('Please install MetaMask!');
+                }
+            }
+
+            connectButton.addEventListener('click', connectWallet);
+
+            
+            if (typeof ethereum !== 'undefined') {
+                window.web3 = new Web3(ethereum);
+            } else {
+                console.warn('No Ethereum provider detected');
+            }
+
+            document.addEventListener('touchend', function() {
+               
+                document.querySelectorAll('.hover-active').forEach(el => {
+                    el.classList.remove('hover-active');
+                });
+            }, {passive: true});
+        ;
+    </script>
+    <script>
+document.getElementById('bidForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const bid = document.getElementById('bidAmount').value;
+
+  document.getElementById('bidFeedback').textContent = `Your bid of $${bid} has been placed!`;
+});
+    </script>
+    
+
+<script src="app.js"></script>
+    </html>

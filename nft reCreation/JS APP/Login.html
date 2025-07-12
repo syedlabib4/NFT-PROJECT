@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NFTMAK - Login</title>
+    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="back-btn">
+                <a href="../index.html">
+                    <i class="fas fa-chevron-left"></i> Back to Home
+                </a>
+            </div>
+            
+            <div class="logo">
+                <a href="../index.html" class="brandLogo">NFT</a>
+                <a href="../index.html" class="brandLogo">MAK</a>
+            </div>
+
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../explore.html">Explore</a></li>
+                    <li><a href="../pages.html">Pages</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="login-container">
+        <div class="login-content">
+            <div class="form-container">
+                <div class="login-header">
+                    <div class="nft-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h1>Welcome Back</h1>
+                    <p class="subtitle">Access your NFT marketplace</p>
+                </div>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter Email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter Password" required>
+                    </div>
+                    
+                    <div class="forgot-password">
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    
+                    <button type="submit" class="login-btn">Login</button>
+                    
+                    <div class="social-login">
+                        <p>Or login with</p>
+                      
+                    </div>
+                    
+                    <div class="signup-link">
+                        Don't have an account? <a href="./registration.html">Sign Up</a>
+                    </div>
+</form>
+<div id="errorMessage" style="color: red; margin-top: 10px;"></div>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const email = this.querySelector('input[type="email"]').value.trim();
+    const password = this.querySelector('input[type="password"]').value.trim();
+    
+    const storedEmail = localStorage.getItem('userEmail');
+    const storedPass = localStorage.getItem('userPassword');
+
+    if (email === storedEmail && password === storedPass) {
+        sessionStorage.setItem('isAuthenticated', 'true');
+        window.location.href = '../index.html';
+    } else {
+        document.getElementById('errorMessage').textContent = 'Invalid email or password';
+    }
+});
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    const errorDiv = document.createElement('div');
+    errorDiv.style.color = 'red';
+    form.parentNode.insertBefore(errorDiv, form.nextSibling);
+
+    form.onsubmit = (e) => {
+        e.preventDefault();
+        
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const password = form.querySelector('input[type="password"]').value.trim();
+        
+        // Get stored credentials
+        const storedEmail = localStorage.getItem('userEmail');
+        const storedPass = localStorage.getItem('userPassword');
+
+        if (email === storedEmail && password === storedPass) {
+            sessionStorage.setItem('isAuthenticated', 'true');
+            window.location.href = '../index.html';
+        } else {
+            errorDiv.textContent = 'Invalid email or password';
+        }
+    };
+});
+</script>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Simple validation
+    const email = document.querySelector('input[type="email"]').value;
+    const password = document.querySelector('input[type="password"]').value;
+    
+    if (email && password) {
+        sessionStorage.setItem('isAuthenticated', 'true');
+        window.location.href = '../index.html';
+    }
+});
+</script>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="brandLogo">NFT</span>
+                <span class="brandLogo">MAK</span>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>Join our community for exclusive drops</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Login form handling
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const userData = JSON.parse(localStorage.getItem(email));
+
+            if (!userData) {
+                alert('User not found! Please register first.');
+                window.location.href = './registration.html';
+                return;
+            }
+
+            if (userData.password !== password) {
+                alert('Incorrect password!');
+                return;
+            }
+
+            alert('Login successful! Redirecting to dashboard...');
+            // Redirect to main app page after login
+            window.location.href = '../index.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+            
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                
+                // Toggle icon between bars and X
+                const icon = menuToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target) && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

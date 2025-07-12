@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="explore.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <title>NFTMAK - Explore</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html" class="brandLogo">NFT</a>
+                <a href="index.html" class="brandLogo">MAK</a>
+            </div>
+
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="explore.html" class="active">Explore</a></li>
+                    <li><a href="pages.html">Pages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="search-container">
+                <input class="searchbar" type="search" placeholder="Search NFT">
+            </div>
+            <div class="login">
+                <a href="./JS APP/Login.html" class="loginBtn">Login</a>
+                <a href="./JS APP/registration.html" class="loginBtn">Sign Up</a>
+            </div>
+        </nav>
+        
+        <div class="page-title">
+            <h1>Explore NFTs</h1>
+            <p>Discover unique digital art and collectibles</p>
+        </div>
+    </header>
+
+    <section class="filter-section">
+        <div class="filter-container">
+            <div class="filter-group">
+                <label>Category</label>
+                <select>
+                    <option>All Categories</option>
+                    <option>Art</option>
+                    <option>Collectibles</option>
+                    <option>Music</option>
+                    <option>Photography</option>
+                    <option>Virtual Worlds</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Price Range</label>
+                <select>
+                    <option>All Prices</option>
+                    <option>Under 1 ETH</option>
+                    <option>1-5 ETH</option>
+                    <option>5-10 ETH</option>
+                    <option>Over 10 ETH</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label>Sort By</label>
+                <select>
+                    <option>Recently Added</option>
+                    <option>Price: Low to High</option>
+                    <option>Price: High to Low</option>
+                    <option>Most Popular</option>
+                </select>
+            </div>
+            <button class="filter-btn">Apply Filters</button>
+        </div>
+    </section>
+
+    <section class="nft-grid">
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./walking girl.gif" alt="Walking Girl NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="1" data-name="Walking Girl" data-price="3.68">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Walking Girl</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">3.68 ETH</span>
+                </div>
+                <p class="nft-desc">Digital art showing a walking girl animation in vibrant colors</p>
+            </div>
+        </div>
+
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./baloon maker.gif" alt="Balloon Maker NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="2" data-name="Baloon Maker" data-price="2.65">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Baloon Maker</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">2.65 ETH</span>
+                </div>
+                <p class="nft-desc">Creative animation of a balloon maker with unique style</p>
+            </div>
+        </div>
+
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./dancing-burgwe.gif" alt="Dancing Bread NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="3" data-name="Dancing Bread" data-price="1.35">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Dancing Bread</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">1.35 ETH</span>
+                </div>
+                <p class="nft-desc">Funky dancing bread animation, perfect for food lovers</p>
+            </div>
+        </div>
+
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./crystal1.jpg" alt="Blue Crystal NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="4" data-name="Blue Crystal" data-price="5.65">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Blue Crystal</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">5.65 ETH</span>
+                </div>
+                <p class="nft-desc">Stunning blue crystal digital art with amazing detail</p>
+            </div>
+        </div>
+
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./crystal2.jpg" alt="Orange Crystal NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="5" data-name="Orange Crystal" data-price="1.65">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Orange Crystal</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">1.65 ETH</span>
+                </div>
+                <p class="nft-desc">Vibrant orange crystal glowing with inner light</p>
+            </div>
+        </div>
+
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./crystal3.jpg" alt="Green Crystal NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="6" data-name="Green Crystal" data-price="7.65">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Green Crystal</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">7.65 ETH</span>
+                </div>
+                <p class="nft-desc">Emerald green crystal with intricate patterns</p>
+            </div>
+        </div>
+
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./thumb 1.png" alt="Thumb 1 NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="7" data-name="Thumb Collection #1" data-price="4.20">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Thumb Collection #1</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">4.20 ETH</span>
+                </div>
+                <p class="nft-desc">Part of the exclusive thumb collection series</p>
+            </div>
+        </div>
+
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./thumb2.png" alt="Thumb 2 NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="8" data-name="Thumb Collection #2" data-price="3.75">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Thumb Collection #2</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">3.75 ETH</span>
+                </div>
+                <p class="nft-desc">Limited edition from the thumb collection</p>
+            </div>
+        </div>
+
+        <div class="nft-card">
+            <div class="nft-image">
+                <img src="./thumb 3.png" alt="Thumb 3 NFT">
+                <div class="nft-overlay">
+                    <button class="bid-btn" data-id="9" data-name="Thumb Collection #3" data-price="5.15">Place a Bid</button>
+                </div>
+            </div>
+            <div class="nft-info">
+                <h3>Thumb Collection #3</h3>
+                <div class="nft-price">
+                    <span class="eth-icon"><i class="fab fa-ethereum"></i></span>
+                    <span class="price">5.15 ETH</span>
+                </div>
+                <p class="nft-desc">The rarest piece from the thumb collection</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="pagination">
+        <a href="#" class="page-link active">1</a>
+        <a href="#" class="page-link">2</a>
+        <a href="#" class="page-link">3</a>
+        <span class="page-dots">...</span>
+        <a href="#" class="page-link">10</a>
+        <a href="#" class="page-link next">Next <i class="fas fa-chevron-right"></i></a>
+    </div>
+
+ 
+    <div id="bidModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Place a Bid</h2>
+            <div class="nft-details">
+                <img id="modal-nft-image" src="" alt="NFT Image">
+                <div class="nft-details-info">
+                    <h3 id="modal-nft-name"></h3>
+                    <p class="current-price">Current Price: <span id="modal-nft-price"></span> ETH</p>
+                </div>
+            </div>
+            <form id="bid-form">
+                <input type="hidden" id="nft-id">
+                <div class="form-group">
+                    <label for="bid-amount">Your Bid (ETH)</label>
+                    <input type="number" id="bid-amount" min="0" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="wallet-address">Wallet Address</label>
+                    <input type="text" id="wallet-address" placeholder="Enter your wallet address" required>
+                </div>
+                <button type="submit" class="submit-bid-btn">Confirm Bid</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="brandLogo">NFT</span>
+                <span class="brandLogo">MAK</span>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>Join our community for exclusive drops</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html> 

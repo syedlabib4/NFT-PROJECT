@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>NFTMAK - Registration</title>
+    <link rel="stylesheet" href="./registration.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="back-btn">
+                <a href="../index.html">
+                    <i class="fas fa-chevron-left"></i> Back to Home
+                </a>
+            </div>
+            
+            <div class="logo">
+                <a href="../index.html" class="brandLogo">NFT</a>
+                <a href="../index.html" class="brandLogo">MAK</a>
+            </div>
+
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <div class="menu">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../explore.html">Explore</a></li>
+                    <li><a href="../pages.html">Pages</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="signup-container">
+        <div class="signup-content">
+            <div class="form-container">
+                <h1>CREATE ACCOUNT</h1>
+                <p class="subtitle">Join the NFT Revolution</p>
+                
+                <form id="registrationForm" class="signup-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password" required>
+                    </div>
+                    
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="signup-btn">Sign Up</button>
+                    
+                    <div class="social-signup">
+                        <p>Or sign up with</p>
+                        <div class="social-buttons">
+                            <button type="button" class="google-btn">
+                                <i class="fab fa-google"></i> Google
+                            </button>
+                            <button type="button" class="apple-btn">
+                                <i class="fab fa-apple"></i> Apple
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="login-link">
+                        Already have an account? <a href="./Login.html">Login</a>
+                    </div>
+</form>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Simple validation
+    const email = document.querySelector('input[type="email"]').value;
+    const password = document.querySelector('input[type="password"]').value;
+    
+    if (email && password) {
+        sessionStorage.setItem('isAuthenticated', 'true');
+        window.location.href = '../index.html';
+    }
+});
+</script>
+            </div>
+            
+            <div class="image-container">
+                <img src="side image.png" alt="NFT Artwork">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span class="brandLogo">NFT</span>
+                <span class="brandLogo">MAK</span>
+            </div>
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+            </div>
+            <div class="footer-text">
+                <p>Join our community for exclusive drops</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Registration form handling
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match!');
+                return;
+            }
+
+            // Store user data in localStorage
+            const userData = {
+                name: name,
+                email: email,
+                password: password // Note: In real applications, never store plain text passwords
+            };
+
+            localStorage.setItem(email, JSON.stringify(userData));
+            alert('Registration successful! Redirecting to login...');
+            window.location.href = './Login.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const menu = document.querySelector('.menu');
+            
+            menuToggle.addEventListener('click', function() {
+                menu.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                
+                // Toggle icon between bars and X
+                const icon = menuToggle.querySelector('i');
+                if (icon.classList.contains('fa-bars')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-times');
+                } else {
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!menu.contains(event.target) && !menuToggle.contains(event.target) && menu.classList.contains('active')) {
+                    menu.classList.remove('active');
+                    menuToggle.classList.remove('active');
+                    
+                    const icon = menuToggle.querySelector('i');
+                    icon.classList.remove('fa-times');
+                    icon.classList.add('fa-bars');
+                }
+            });
+        });
+    </script>
+</body> 
+</html>
